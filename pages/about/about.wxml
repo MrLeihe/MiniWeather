@@ -1,0 +1,40 @@
+<!--pages/blog/health.wxml-->
+<view class='about_root'>
+  <image class='logo' src='../../img/weather_logo.png'></image>
+  <text class='mini_app_info_text'>天气er 1.0.1</text>
+  <view class='about_divider'></view>
+
+  <navigator class='navigator_layout' url='../../pages/setting/setting' hidden='true'>
+    <text class='navigator_text'>设置</text>
+    <image class='navigator_arrow' src='../../img/arrow.png'></image>
+  </navigator>
+  <navigator class='navigator_layout' url='../../pages/skill/skill'>
+    <text class='navigator_text'>使用技巧</text>
+    <image class='navigator_arrow' src='../../img/arrow.png'></image>
+  </navigator>
+  <navigator class='navigator_layout' url='../../pages/data-source/data-source'>
+    <text class='navigator_text'>数据来源与致谢</text>
+    <image class='navigator_arrow' src='../../img/arrow.png'></image>
+  </navigator>
+  <navigator class='navigator_layout' url='../../pages/author/author'>
+    <text class='navigator_text'>关于作者</text>
+    <image class='navigator_arrow' src='../../img/arrow.png'></image>
+  </navigator>
+</view>
+
+<view class='link_app'>
+  <view class='line_root'>
+    <view class='line-wraper'>
+      <view class='line-css-left'></view>
+    </view>
+    <text class='link-center'>更多小程序</text>
+    <view class='line-wraper'>
+      <view class='line-css-right'></view>
+    </view>
+  </view>
+
+  <view class='link-app-layout' bindtap='navigateAnimal'>
+    <image class='link-image' src='../../img/panda.jpeg'></image>
+    <text class='line-app-name'>识别动物</text>
+  </view>
+</view>

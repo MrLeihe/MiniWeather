@@ -1,0 +1,9 @@
+<!--pages/data-source/data-source.wxml-->
+<view class='data_root'>
+  <include src='../../common/left_line.wxml'/>
+  <text class='common_item_title'>天气数据</text>
+  <text class='common_item_content'>分钟降雨预报由中国气象局和和风天气联合出品</text>
+  <include src='../../common/left_line.wxml'/>
+  <text class='common_item_title'>地图数据</text>
+  <text class='common_item_content'>腾讯地图</text>
+</view>

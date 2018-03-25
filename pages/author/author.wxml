@@ -1,0 +1,22 @@
+<!--pages/author/author.wxml-->
+<view class='author_root'>
+  <include src='../../common/left_line.wxml'/>
+
+  <text class='common_item_title'>作者微信 #烦请备注</text>
+
+  <view class='author_wechat_root'>
+    <text class='author_wechat_id'>hl1484542698</text>
+    <text class='author_click' bindtap='copy_wechat'>点击复制</text>
+  </view>
+
+  <include src='../../common/left_line.wxml'/>
+
+  <text class='common_item_title'>作者留言</text>
+  <text class='common_item_content'>建议与反馈可以添加作者微信。当然也可以交个朋友啦，茫茫人海，遇见即是缘分。#也谢谢各位慷慨解囊的童鞋对「天气er」的认可。</text>
+
+  <include src='../../common/left_line.wxml'/>
+  <text class='common_item_title'>「天气er」的下个版本？</text>
+  <text class='common_item_content'>考虑增加一些主题的设置。</text>
+
+  <text class='reward_author' bindtap='rewardAuthor'>打赏作者</text>
+</view>

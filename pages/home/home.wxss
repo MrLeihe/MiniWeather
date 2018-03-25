@@ -1,0 +1,599 @@
+/**home.wxss**/
+@import '../../common/common.wxss';
+/**相对布局**/
+.relative{
+  width:100%;
+  position:relative;
+}
+
+/**背景**/
+.weather_bg{
+  width: 100%;
+  height: 100vh;
+  position:absolute;
+}
+
+.content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+}
+
+.location_address{
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.location_icon{
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.location_text{
+  font-size: 28rpx;
+  color: white;
+  margin-left: 5rpx;
+}
+
+.air_quality_wraper{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.air_quality{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 15rpx;
+  align-items: center;
+  flex-direction: column;
+}
+
+.air_text{
+  font-size: 20rpx;
+  color: white;
+}
+
+.quality_text{
+  font-size: 24rpx;
+  margin-top: 2rpx;
+  color: white;
+}
+
+.temp{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp_text{
+  font-size: 100rpx;
+  color: white;
+  margin-left: 30rpx;
+}
+
+.cond{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cond_text{
+  font-size: 35rpx;
+  color: white;
+}
+
+.swiper_container{
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  margin-top: 10rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.wind_text{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  color: white;
+}
+
+.essay{
+  width: 100%;
+  display: flex;
+  margin-top: 50rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.essay_text{
+  font-size: 28rpx;
+  color: white;
+}
+
+.recently_weather{
+  width: 100%;
+  height: 180rpx;
+  position: relative;
+  margin-top: 400rpx;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.today_weather{
+  width: 50%;
+  height: 85rpx;
+  position: relative;
+}
+
+.day_text{
+  position: absolute;
+  margin-left: 40rpx;
+  font-size: 28rpx;
+  color: #666666;
+  left: 0;
+}
+
+.day_weather_text{
+  position: absolute;
+  font-size: 28rpx;
+  margin-left: 40rpx;
+  color: #666666;
+  left: 0;
+  bottom: 0;
+}
+
+.day_temp_text{
+  position: absolute;
+  font-size: 26rpx;
+  color: #666666;
+  right: 0rpx;
+  margin-right: 40rpx;
+}
+
+.day_weather_icon{
+  position: absolute;
+  width: 48rpx;
+  height: 48rpx;
+  bottom: 0rpx;
+  right: 0rpx;
+  margin-right: 40rpx;
+}
+
+.day_line{
+  width: 1rpx;
+  height: 60%;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  background: #e1e1e1;
+  opacity: 0.8;
+}
+
+.recently_line{
+  width: 100%;
+  height: 1rpx;
+  background: #e1e1e1;
+}
+
+.divider{
+  width: 100%;
+  height: 14rpx;
+  background: #F5F5F5;
+}
+
+/**逐小时天气布局**/
+.hourly_box{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: white;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.hourly_scroll_container{
+  width: auto;
+  overflow: hidden;
+}
+
+.hourly_item{
+  width: 150rpx;
+  height: auto;
+  display: inline-block;
+}
+
+.hourly_warp{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hourly_time{
+  font-size: 24rpx;
+  color: #B3B3B3;
+  margin-top: 40rpx;
+}
+
+.hourly_icon{
+  width: 45rpx;
+  height: 45rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.hourly_temp{
+  font-size: 28rpx;
+  color: #666666;
+  margin-bottom: 30rpx;
+}
+
+/**七天天气预报**/
+.forecast_box{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: white;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast_scroll_container{
+  width: auto;
+  overflow: hidden;
+}
+
+.forecast_item{
+  width: 180rpx;
+  height: auto;
+  display: inline-block;
+}
+
+.forecast_warp{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.forecast_day{
+  font-size: 24rpx;
+  color: #B3B3B3;
+  margin-top: 30rpx;
+}
+
+.forecast_time{
+  font-size: 24rpx;
+  color: #B3B3B3;
+  margin-top: 5rpx;
+}
+
+.forecast_weather{
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 20rpx;
+}
+
+.forecast_icon{
+  width: 45rpx;
+  height: 45rpx;
+  margin-top: 15rpx;
+}
+
+.forecast_tmp{
+  font-size: 26rpx;
+  color: #666666;
+  margin-top: 10rpx;
+}
+
+.forecast_wind{
+  font-size: 24rpx;
+  color: #B3B3B3;
+  margin-top: 15rpx;
+}
+
+.forecast_wind_spd{
+  font-size: 24rpx;
+  color: #B3B3B3;
+  margin-top: 3rpx;
+  margin-bottom: 30rpx;
+}
+
+/**生活指数父布局**/
+.lifestyle_root{
+  width: 100%;
+  height: 380rpx;
+  background: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.lifestyle_item{
+  width: 25%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.5rpx solid #ececec;
+  border-right: 0.5rpx solid #ececec;
+  box-sizing: border-box;
+}
+
+.lifestyle_icon{
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.lifestyle_status{
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 10rpx;
+  margin-bottom: 2rpx;
+}
+
+.lifestyle_action{
+  font-size: 24rpx;
+  color: #B3B3B3;
+}
+
+.other_root{
+  width: 100%;
+  height: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.other_row{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  flex-direction: row;
+}
+
+.other_item{
+  font-size: 24rpx;
+  color: #999999;
+  margin-left: 30rpx;
+  background: none;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  flex: 1;
+}
+
+.other_item::after{
+  border: 2rpx solid #999999;
+}
+
+/**弹框**/
+.blur_bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.model_dialog{
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.model_content{
+  width: 60%;
+  height: 55%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #a5d9e9;
+  border-radius: 10rpx;
+}
+
+.close_icon{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  right: 0px; 
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.air_info{
+  width: 100%;
+  display: flex;
+  margin-top: 80rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.air_info_title{
+  font-size: 24rpx;
+  color: white;
+}
+
+.air_score{
+  font-size: 100rpx;
+  color: white;
+}
+
+.air_layer{
+  font-size: 24rpx;
+  color: white;
+  margin-top: 15rpx;
+  border-radius: 10rpx;
+  padding-right: 25rpx;
+  padding-left: 25rpx;
+  padding-top: 3rpx;
+  padding-bottom: 3rpx;
+}
+
+.air_detail{
+  width: 100%;
+  height: 35%;
+  bottom: 0rpx;
+  background: white;
+  position: absolute;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.air_detail_item{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.pm_layout{
+  width: 33.3%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.value_text{
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.type_text{
+  font-size: 22rpx;
+  color: #999999;
+  margin-top: 5rpx;
+}
+
+.horizontal_line{
+  width: 100%;
+  height: 1px;
+  background: #e1e1e1;
+  opacity: 0.8;
+}
+
+.vertical_line_top{
+  width: 1px;
+  height: 100%;
+  background: #e1e1e1;
+  opacity: 0.8;
+  margin-top: 10rpx;
+}
+
+.vertical_line_bottom{
+  width: 1px;
+  height: 90%;
+  background: #e1e1e1;
+  opacity: 0.8;
+}
+
+.lifestyle_content{
+  width: 60%;
+  height: auto;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10rpx;
+}
+
+.lifestyle_dialog_title{
+  font-size: 40rpx;
+  color: white;
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: green;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+
+.lifestyle_dialog_bottom_layout{
+  width: 100%;
+  height: auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+
+.lifestyle_dialog_content{
+  font-size: 28rpx;
+  color: #666666;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+/**去掉button的边框**/
+.lifestyle_dialog_sure::after{
+  display: none;
+}
+
+.lifestyle_dialog_sure{
+  font-size: 30rpx;
+  color: white;
+  margin-bottom: 30rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.common_item_title{
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+
+.common_tag{
+  width: 60rpx;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background: #e5e5e5;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}

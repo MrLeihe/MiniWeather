@@ -1,0 +1,23 @@
+.common_tag{
+  width: 60rpx;
+  height: 10rpx;
+  border-radius: 5rpx;
+  background: #e5e5e5;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+}
+
+.common_item_title{
+  font-size: 28rpx;
+  color: #666666;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+.common_item_content{
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+  margin-right: 20rpx;
+  color: #999999;
+}

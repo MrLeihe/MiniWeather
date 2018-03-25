@@ -1,0 +1,8 @@
+/* pages/data-source/data-source.wxss */
+@import '../../common/common.wxss';
+
+.data_root{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

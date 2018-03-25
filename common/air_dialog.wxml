@@ -1,0 +1,58 @@
+
+<!--高斯模糊效果 -->
+  <view class='blur_bg' wx:if="{{showModel}}">
+  </view>
+<!--弹窗 -->
+  <view class='model_dialog' bindtap='hideModel' catchtouchmove='preventTouchMove' wx:if="{{showModel}}">
+    <view class='model_content'>
+          <image class="close_icon" src='../../img/close.png'></image>
+
+          <view class='air_info'>
+            <text class='air_info_title'>空气质量指数</text>
+            <text class='air_score'>{{airScore}}</text>
+            <text class='air_layer' style='background-color: {{airColor}}'>{{airLayer}}</text>
+          </view>
+          <!--底部天气属性细节-->
+          <view class='air_detail'>
+            <view class='air_detail_item'>
+              <view class='pm_layout'>
+                <text class='value_text'>{{pm25}}</text>
+                <text class='type_text'>PM2.5</text>
+              </view>
+              <view class='vertical_line_top'></view>
+              <view class='pm_layout'>
+                <text class='value_text'>{{pm10}}</text>
+                <text class='type_text'>PM10</text>
+              </view>
+              <view class='vertical_line_top'></view>
+              <view class='pm_layout'>
+                <text class='value_text'>{{so2}}</text>
+                <text class='type_text'>SO2</text>
+              </view>
+            </view>
+            
+            <view class='horizontal_line'></view>
+
+            <view class='air_detail_item'>
+              <view class='pm_layout'>
+                <text class='value_text'>{{no2}}</text>
+                <text class='type_text'>NO2</text>
+              </view>
+
+              <view class='vertical_line_bottom'></view>
+
+              <view class='pm_layout'>
+                <text class='value_text'>{{o3}}</text>
+                <text class='type_text'>O3</text>
+              </view>
+
+              <view class='vertical_line_bottom'></view>
+
+              <view class='pm_layout'>
+                <text class='value_text'>{{co}}</text>
+                <text class='type_text'>CO</text>
+              </view>
+            </view>
+          </view>
+    </view>
+  </view>

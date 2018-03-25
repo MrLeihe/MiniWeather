@@ -1,0 +1,14 @@
+<!--pages/skill/skill.wxml-->
+<view class='skill_root'>
+  <include src='../../common/left_line.wxml'/>
+  <text class='common_item_title'>1、「天气er」可以查看空气质量实况吗？</text>
+  <text class='common_item_content'>可以。点击天气首页左上角空气按钮，即可查看包括pm10、pm25、二氧化氮、二氧化硫、	一氧化碳、臭氧在内的六项空气指数</text>
+
+  <include src='../../common/left_line.wxml'/>
+  <text class='common_item_title'>2、「天气er」支持查看生活指数建议吗？</text>
+  <text class='common_item_content'>支持。滑动到首页底部点击任意一项生活指数，都可以查看对应的建议或推荐。</text>
+
+   <include src='../../common/left_line.wxml'/>
+  <text class='common_item_title'>3、「天气er」支持切换城市查看不同城市的天气吗？</text>
+  <text class='common_item_content'>支持。可以点击天气首页最上方的地址文字，进入位置选择界面，选中要查看天气的地址后点击确定，此时会回到首页并呈现指定城市的天气信息哈。</text>
+</view>

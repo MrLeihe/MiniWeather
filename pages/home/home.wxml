@@ -1,0 +1,119 @@
+<!--logs.wxml-->
+<view class='relative'>
+  <image class='weather_bg' src='{{bgSrc}}' mode='widthFix'></image>
+  <!--主要内容-->
+  <view class='content'>
+    <!--实况天气-->
+    <view class="location_address" bindtap='chooseLocation'>
+      <image class='location_icon' src='../../img/location_icon.png'></image>
+      <text class='location_text'>{{location_area}}</text>
+    </view>
+    <view class='air_quality_wraper'>
+      <view class='air_quality' bindtap='showAirModel' style='background-color:{{airColor}}'>
+        <text class='air_text'>空气</text>
+        <text class='quality_text'>{{airLayer}}</text>
+      </view>
+    </view>
+    <view class='temp'>
+      <text class='temp_text'>{{tmp_str}}</text>
+    </view>
+    <view class='cond'>
+      <text class='cond_text'>{{cond_str}}</text>
+    </view>
+    <swiper class='swiper_container' vertical="true" autoplay="true" circular="true" interval="5000">
+      <block wx:for="{{swiperList}}" wx:key='index'>
+        <swiper-item>
+          <text class='wind_text'>{{item}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='essay'>
+      <text class='essay_text'>{{essay_str}}</text>
+    </view>
+    <!--今明两天天气-->
+    <view class='recently_weather'>
+      <view class='today_weather'>
+        <text class='day_text'>今天</text>
+        <text class='day_weather_text'>{{today_weather}}</text>
+        <text class='day_temp_text'>{{today_temp}}</text>
+        <image class='day_weather_icon' src="{{today_weather_icon}}"></image>
+      </view>
+      <view class='day_line'></view>
+      <view class='today_weather'>
+        <text class='day_text'>明天</text>
+        <text class='day_weather_text'>{{tomorrow_weather}}</text>
+        <text class='day_temp_text'>{{tomorrow_temp}}</text>
+        <image class='day_weather_icon' src="{{tomorrow_weather_icon}}"></image>
+      </view>
+    </view>
+    <view class='recently_line'></view>
+    <view class='divider'></view>
+    <view class='recently_line'></view>
+    <!--24小时内逐三小时预报-->
+    <view class='hourly_box'>
+      <include src='../../common/left_line.wxml' />
+      <text class='common_item_content'>逐三小时天气</text>
+      <scroll-view class='hourly_scroll_container' scroll-x='true'>
+        <view class='hourly_item' wx:for='{{hourlyList}}' wx:for-item='item' wx:key='index'>
+          <view class='hourly_warp'>
+            <text class='hourly_time'>{{item.time}}</text>
+            <image class='hourly_icon' src='{{item.hourlyIcon}}'></image>
+            <text class='hourly_temp'>{{item.tmp}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='recently_line'></view>
+    <view class='divider'></view>
+    <view class='recently_line'></view>
+    <!--七天预报-->
+    <view class='forecast_box'>
+      <include src='../../common/left_line.wxml' />
+      <text class='common_item_content'>多日预报</text>
+      <scroll-view class='forecast_scroll_container' scroll-x='true'>
+        <view class='forecast_item' wx:for='{{forecastList}}' wx:for-item='item' wx:key='index'>
+          <view class='forecast_warp'>
+            <text class='forecast_day'>{{item.day}}</text>
+            <text class='forecast_time'>{{item.date}}</text>
+            <text class='forecast_weather'>{{item.cond_txt_d}}</text>
+            <image class='forecast_icon' src='{{item.forecastIcon}}'></image>
+            <text class='forecast_tmp'>{{item.tmp}}</text>
+            <text class='forecast_wind'>{{item.wind_dir}}</text>
+            <text class='forecast_wind_spd'>{{item.wind_sc}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='recently_line'></view>
+    <view class='divider'></view>
+    <!--生活指数-->
+    <view class='lifestyle_root'>
+      <view class='lifestyle_item' wx:for='{{lifestyleList}}' wx:key='lifeIndex' wx:for-item='item' bindtap='showLifestyleDialog' data-id='{{item.id}}'>
+        <image class='lifestyle_icon' src="{{item.icon}}"></image>
+        <text class='lifestyle_status'>{{item.brf}}</text>
+        <text class='lifestyle_action'>{{item.type}}</text>
+      </view>
+    </view>
+    <!--其它-->
+    <view class='recently_line'></view>
+    <view class='divider'></view>
+    <view class='recently_line'></view>
+    <view class='other_root'>
+      <include src='../../common/left_line.wxml' />
+      <text class='common_item_content'>其它</text>
+      <view class='other_row'>
+        <button class='other_item' bindtap='award'>打赏作者</button>
+        <button class='other_item' open-type='share'>分享好友</button>
+        <button class='other_item' bindtap='contact' style='margin-right: 30rpx;'>联系作者</button>
+      </view>
+    </view>
+    <view class='recently_line'></view>
+    <view class='divider'></view>
+  </view>
+
+  <!--引入空气质量dialog-->
+  <include src='../../common/air_dialog.wxml' />
+
+  <!--引入生活指数dialog-->
+  <include src='../../common/lifestyle.wxml' />
+</view>

@@ -1,0 +1,8 @@
+/* pages/skill/skill.wxss */
+@import '../../common/common.wxss';
+
+.skill_root{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

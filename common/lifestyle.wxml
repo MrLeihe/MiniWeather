@@ -1,0 +1,13 @@
+<!--高斯模糊效果 -->
+  <view class='blur_bg' wx:if="{{showLifestyleModel}}">
+  </view>
+<!--弹窗 -->
+  <view class='model_dialog' wx:if="{{showLifestyleModel}}">
+    <view class='lifestyle_content'>
+        <text class='lifestyle_dialog_title' style='background-color:{{lifestyleDialogColor}}'>{{lifestyleTitle}}</text>
+        <view class='lifestyle_dialog_bottom_layout'>
+          <text class='lifestyle_dialog_content'>{{lifestyleContent}}</text>
+          <button class='lifestyle_dialog_sure' bindtap='hideLifestyleModel' style='background-color:{{lifestyleDialogColor}}'>我知道了</button>
+        </view>
+    </view>
+  </view>

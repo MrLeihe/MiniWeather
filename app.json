@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/about/about",
+    "pages/setting/setting",
+    "pages/skill/skill",
+    "pages/data-source/data-source",
+    "pages/author/author"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "天气er",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "img/weather.png",
+        "selectedIconPath": "img/weather_HL.png",
+        "text": "天气"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "img/about.png",
+        "selectedIconPath": "img/about_HL.png",
+        "text": "关于"
+      }
+    ]
+  }
+}
