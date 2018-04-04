@@ -67,8 +67,29 @@ Page({
   copy_wechat: function(){
     wx.setClipboardData({
       data: 'hl1484542698',
-
       success(res){
+        wx.showToast({
+          title: '已复制到剪切板',
+        })
+      },
+    })
+  },
+
+  copy_wechat_wc: function(){
+    wx.setClipboardData({
+      data: 'YJ199608100913',
+      success(res) {
+        wx.showToast({
+          title: '已复制到剪切板',
+        })
+      },
+    })
+  },
+
+  copy_wechat_Huang: function(){
+    wx.setClipboardData({
+      data: 'wyy668893',
+      success(res) {
         wx.showToast({
           title: '已复制到剪切板',
         })
